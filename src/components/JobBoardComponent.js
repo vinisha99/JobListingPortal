@@ -1,6 +1,6 @@
 import React from 'react';
 
-const JobBoardComponent = ({job}) => {
+const JobBoardComponent = ({job, handleTagClick}) => {
     const tags =[job.role, job.level];
 
     if(job.languages){
@@ -29,7 +29,7 @@ const JobBoardComponent = ({job}) => {
         </div>
         <div className='flex'>
             {tags ? tags.map((tag) =>
-                <span>{tag}</span>):''
+                <span onClick={() => handleTagClick(tag)}>{tag}</span>):''
             }
         </div>
     </div>
