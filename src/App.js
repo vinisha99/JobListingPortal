@@ -1,3 +1,4 @@
+import './App.css';
 import React, { useEffect, useState } from 'react';
 import data from './assets/data.json';
 import JobBoardComponent from './components/JobBoardComponent';
@@ -43,18 +44,18 @@ function App() {
     const filteredJobs = jobs.filter(filterFunc);
 
   return (
-    <div>
+    <div className="main-container">
       <header>
         <img src='/images/bg-header-desktop.svg' alt="bg-image"/>
       </header>
       <div className="container">
       {filters.length > 0 && (
-        <div className="">
+        <div className="search-box">
           {filters.map((filter) => (
-            <span onClick={() => handleFilterClick(filter)}>{filter}x
-            </span>
+            <span class="filter-text" onClick={() => handleFilterClick(filter)}>{filter}
+            <span className="clear-cross">x</span></span>
           ))}
-          <span onClick={clearFilters}>Clear</span>
+          <span className="clear-text" onClick={clearFilters}>Clear</span>
         </div>
       )}
       {jobs.length === 0 ?(

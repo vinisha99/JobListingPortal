@@ -12,24 +12,24 @@ const JobBoardComponent = ({job, handleTagClick}) => {
 
 
     return(
-    <div className='flex bg-white shadow'>
-        <div>
+    <div className='job-component flex bg-white shadow'>
+        <div className="job-logo">
             <img src = {job.logo} alt = {job.company}/>
         </div>
-        <div>
-            <h3>
+        <div className="mid-contents">
+            <h3 className="">
                 {job.company}
-                {job.new && (<span>New</span>)}
-                {job.featured && (<span>Featured</span>)}
+                {job.new && (<span className="tag-new">New!</span>)}
+                {job.featured && (<span className="tag-featured">Featured</span>)}
             </h3>
             <h2>{job.position}</h2>
-            <p>
-                {job.postedAt} &middot; {job.contract} &middot; {job.location}
+            <p className="bottom-text">
+                <span className="bottom-text-spacing">{job.postedAt}</span><span className="bottom-text-spacing">&middot; </span><span className="bottom-text-spacing">{job.contract}</span><span className="bottom-text-spacing">&middot;</span><span className="bottom-text-spacing">{job.location}</span>
             </p>
         </div>
-        <div className='flex'>
+        <div className='tags'>
             {tags ? tags.map((tag) =>
-                <span onClick={() => handleTagClick(tag)}>{tag}</span>):''
+                <span className="font-color font-weight block-color tag-style" onClick={() => handleTagClick(tag)}>{tag}</span>):''
             }
         </div>
     </div>
