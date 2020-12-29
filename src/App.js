@@ -54,10 +54,10 @@ function App() {
           <div className="search-tags">
             {filters.map((filter) => (
             <span class="filter-text" onClick={() => handleFilterClick(filter)}>{filter}
-            <span className="clear-cross">x</span></span>
+            <span className="clear-cross font-color">x</span></span>
           ))}
           </div>
-          <div className="clear-text font-color font-weight" onClick={clearFilters}>Clear</div>
+          <div className="clear-text font-color font-weight font-size" onClick={clearFilters}>Clear</div>
         </div>
       )}
       {jobs.length === 0 ?(

@@ -46,9 +46,17 @@ header{
     padding: 4px 4px 4px 4px;
     border-radius: 3px;
 }
+.tag-style:hover{
+    background-color: hsl(180deg 31% 51%); 
+    color: hsl(180, 36%, 95%);
+    cursor: pointer;
+}
 h3{
     color: hsl(180deg 31% 51%);
     font-size: medium;
+}
+h3:hover{
+    cursor: pointer;
 }
 .tag-new{
     background-color: hsl(180deg 31% 51%);
@@ -98,14 +106,19 @@ h2{
     border-radius: 3px;
 }
 .clear-cross{
-    background-color: hsl(180deg 51% 27%);
+    background-color: hsl(180deg 31% 51%);
     padding: 0.5% 1% 0.5% 1%;
-    color: white;
     font-size: medium;
     margin-left: 1%;
+    color: white;
 }
-.clear-text{
-
+.clear-cross:hover{
+    background-color: hsl(180deg 51% 27%);  
+    cursor: pointer; 
+}
+.clear-text:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .search-tags{
     display: flex;
