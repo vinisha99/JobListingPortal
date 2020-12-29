@@ -29,7 +29,7 @@ const JobBoardComponent = ({job, handleTagClick}) => {
         </div>
         <div className='tags'>
             {tags ? tags.map((tag) =>
-                <span className="font-color font-weight block-color tag-style" onClick={() => handleTagClick(tag)}>{tag}</span>):''
+                <span className="font-color font-weight font-size tag-style" onClick={() => handleTagClick(tag)}>{tag}</span>):''
             }
         </div>
     </div>
